@@ -10,9 +10,9 @@ my ($dir) = @ARGV;
 chdir $dir or die;
 
 my ($idir) = (split "/", $dir)[-1];
-my $year = 2018;#substr $idir, 0, 4;
-my $month = "08";#substr $idir, 4, 2;
-my $day = 15;#substr $idir, 6, 2;
+my $year = substr $idir, 0, 4;
+my $month = substr $idir, 4, 2;
+my $day = substr $idir, 6, 2;
 my $hour = "00";
 my $minute = "00";
 my $second = "00";
@@ -28,3 +28,4 @@ print SAC "ch allt (0 - &1,o&) iztype IO \n";
 print SAC "wh \n";
 print SAC "q \n";
 close(SAC);
+

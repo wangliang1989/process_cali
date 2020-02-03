@@ -1,1 +1,1 @@
-调用 mseed.pl 或者 seed.pl 处理连续数据
+用于处理加州数据，可以同时处理seed和mseed数据
