@@ -9,9 +9,9 @@ foreach my $dir (@ARGV) {
     system "perl 1.rdseed.pl $dir";
     system "perl 4.synchronize.pl $dir";
     system "perl 5.transfer.pl $dir";
-    system "perl 7.resample.pl $dir 0.05";
+    system "perl 7.resample.pl $dir 0.4";
     system "perl 8.rename.pl $dir";
-    system "perl 9.bandpass.pl $dir";
+    system "perl 9.bandpass.pl $dir 0.2 1";
     unlink glob "$dir/*.seed";
     unlink glob "$dir/*.mseed";
 }
